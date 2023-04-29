@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: red;
+
+}
+
+.box {
+    border: 1px solid #999;
+    border-top: 5px solid #000;
+    padding: 15px;
+
+
+}
+
+.v-space {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+}
+
+a[href="https://www.google.com"] {
+    color: #235;
+    text-decoration: none;
+
+}
+
+
+a[href="https://www.google.com"]:hover {
+
+    color: rgb(168, 6, 95);
+    background-color: aqua;
+    text-decoration: underline;
+
+}
+
+a:visited {
+    color: rgb(0, 0, 0);
+}
+
+p::first-letter {
+    color: chartreuse;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+a[href^="http"]::after {
+    content: " ->";
+
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 100px;
+    border: 4px solid #999;
+    padding: 4px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.avatar:hover {
+    border-color: #921;
+
+}
+
+h3 small {
+    display: none;
+    /*visibility: hidden;*/
+
+}
+
+h3:hover small {
+    display: inline;
+}

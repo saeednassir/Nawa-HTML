@@ -1,0 +1,300 @@
+/* @import url(font.css); */
+
+@keyframes pulse {
+    0%
+
+    /*from*/
+        {
+        background-color: #ffd800;
+        box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+        transform: rotate(0deg);
+
+    }
+
+    50% {
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(255, 255, 255, .5);
+        transform: rotate(180deg);
+    }
+
+    100%
+
+    /*to*/
+        {
+        background-color: #f26149;
+        box-shadow: 0 0 20px rgba(255, 255, 255, .4);
+        transform: rotate(360deg);
+
+    }
+}
+
+/* -using bootstrap-
+ * {
+    box-sizing: border-box;
+}
+*/
+
+html {
+    font-family: 'Montserrat Regular', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #707070;
+    /* rgb(112,112,112) */
+}
+
+/* -using bootstrap-
+body {
+    margin: 0;
+
+}
+*/
+
+a {
+    text-decoration: none;
+}
+
+#page-header {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#logo {
+    flex: 1;
+}
+
+#page-header nav {
+    display: flex;
+
+}
+
+#page-header nav>a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    font-size: 0.8rem;
+
+}
+
+#page-header nav.social-links>a {
+    margin: 0 4px;
+}
+
+#hero {
+    height: 100vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /*background-size: cover;*/
+
+}
+
+#hero h1 {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+#hero h1 span.first {
+    display: block;
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+#hero h1 span.last {
+    font-family: 'Square Peg', cursive;
+    /*import google font*/
+    display: block;
+    font-size: 16rem;
+    margin-top: -90px;
+    text-shadow: 7px 7px 10px #666;
+}
+
+
+.over-layer {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+
+
+}
+
+.center-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-box {
+    position: relative;
+}
+
+#hero .pricing {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #ffd800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+    text-transform: uppercase;
+    position: absolute;
+    top: -10px;
+    right: -100px;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+
+}
+
+#hero .pricing span.pricing-value {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.book-now {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.book-now a {
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    background-color: #f26149;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+.book-now a .fa-solid {
+    margin-left: 1rem;
+}
+
+.book-now a:hover {
+    box-shadow: 0 0 10px #666;
+}
+
+
+
+#packages {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+
+#packages>h2 {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bolder;
+
+}
+
+#packages>p {
+    padding: 0 300px;
+    margin-bottom: 50px;
+}
+
+/* using bootstrap  
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+*/
+
+.pkg-item {
+    /*flex-grow: 1;
+    flex-basis: 25%;
+     -using bootstrap-
+    flex: 1 25%;
+    */
+    overflow: hidden;
+    padding: 7px;
+    position: relative;
+}
+
+.pkg-item:hover .pkg-detalis {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #fff;
+}
+
+.pkg-item:hover .pkg-detalis h3 {
+    color: #fff;
+}
+
+.pkg-item:hover img {
+    /* filter: grayscale(1);*/
+    transform: scale(120%)
+        /*rotate(10deg)*/
+    ;
+}
+
+
+.pkg-item img {
+    max-width: 100%;
+    transition: all 1s linear;
+}
+
+.pkg-detalis {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 14px;
+    text-align: center;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.pkg-detalis h3 {
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.pkg-detalis p {
+    font-size: .8rem;
+
+}
+
+@media (max-width : 980px) {
+    .pkg-item {
+        /*flex: 1 33.33%;*/
+    }
+}
+
+@media (max-width : 680px) {
+    .pkg-item {
+        /*flex: 1 50%;*/
+    }
+
+}
+
+@media (max-width : 480px) {
+    .pkg-item {
+        /*flex: 1 100%;*/
+    }
+
+    .red {
+        color: #f26149 !important;
+    }
+
+    #page-header nav#main-nav,
+    .hero-box {
+        display: none !important;
+    }
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaveScript Basics</title>
+    <script src="script.js" defer>
+        // code here is not allowed
+    </script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <script>
+        // js code..   
+        let name = 'Saeed'
+        let city = 'Gaza';
+
+        let Cities = ['gaza', 'Nusirat', 'rafah', [2022, 2023]];
+        Cities[7] = 'South';
+        Cities.push('Khan Younis'); // add item to end of the array 
+        city = Cities.pop(); // remove last item in the array and return it
+        Cities.unshift('cairo'); // add item to the begining (first) of the array 
+        Cities.shift(); //remove first item from the array 
+
+        Cities.splice(1,1); // remove item from offset 1
+        Cities.splice(1,1,'Test'); // replace item in offset 1 with "Test"
+
+        console.log(Cities);
+
+        alert(Cities.length); // arrauName.length : Size of the array 
+        alert(city);
+
+
+
+        /*if(city == 'Gaza')
+        {
+            let name = 'ahmed'
+            alert('Hello ' + name);
+        
+        }
+
+        hello('Saeed Nassir');
+
+        alert('Hello ' + name);*/
+    </script>
+</body>
+
+</html>
